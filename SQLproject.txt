@@ -1,0 +1,34 @@
+SELECT DISTINCT year 
+FROM population_years;
+
+SELECT * FROM population_years
+WHERE country = 'Gabon'
+ORDER BY population DESC
+LIMIT 1;
+
+SELECT * FROM population_years
+WHERE year = '2005'
+ORDER BY population ASC
+LIMIT 10;
+
+SELECT DISTINCT country
+FROM population_years
+WHERE population > '100.000000'
+AND year = '2010';
+
+SELECT * FROM population_years
+WHERE country LIKE '%Islands%';
+
+SELECT * FROM population_years
+WHERE year BETWEEN '2000' AND '2011'
+AND country = 'Indonesia';
+
+SELECT MAX(population) 
+FROM population_years
+WHERE year BETWEEN '2000' AND '2011'
+AND country = 'Indonesia';
+
+SELECT MIN(population) 
+FROM population_years
+WHERE year BETWEEN '2000' AND '2011'
+AND country = 'Indonesia';
